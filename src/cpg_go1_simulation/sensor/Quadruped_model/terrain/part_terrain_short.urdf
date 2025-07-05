@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<robot name="slope_model">
+    <!-- Root link -->
+    <link name="world">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+    </link>
+    <link name="planeLink">
+        <contact>
+            <lateral_friction value="1"/>
+        </contact>
+        <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <mass value=".0"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+        <mesh filename="plane1000.obj" scale="1 1 1"/>
+        </geometry>
+        <material name="white">
+            <color rgba="1 1 1 1"/>
+        </material>
+        </visual>
+        <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+            <plane normal="0 0 1"/>
+        </geometry>
+        </collision>
+    </link>
+
+    <!-- Terrain 1 -->
+    <link name="slope_rough">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/2.5/slope_1.STL"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/2.5/slope_1.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Terrain 1 -->
+    <link name="plane_box">
+        <inertial>
+            <origin xyz="2.5 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="2.5 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/2.5/plane_box_1.STL"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="2.5 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/2.5/plane_box_1.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="slope_rough2">
+        <inertial>
+            <origin xyz="5 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="5 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/2.5/slope_2.STL"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="5 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/2.5/slope_2.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Terrain 1 -->
+    <link name="plane_box2">
+        <inertial>
+            <origin xyz="7.5 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="7.5 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/2.5/plane_box_2.STL"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="7.5 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/2.5/plane_box_2.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="slope_rough3">
+        <inertial>
+            <origin xyz="12.5 2 0" rpy="0 0 3.1415926"/>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="12.5 2 0" rpy="0 0 3.1415926"/>
+            <geometry>
+                <mesh filename="meshes/2.5/slope_2.STL"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="12.5 2 0" rpy="0 0 3.1415926"/>
+            <geometry>
+                <mesh filename="meshes/2.5/slope_2.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+        <!-- Terrain 1 -->
+    <link name="plane_box3">
+        <inertial>
+            <origin xyz="12.5 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="12.5 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/2.5/plane_box_1.STL"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="12.5 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/2.5/plane_box_1.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="slope_rough4">
+        <inertial>
+            <origin xyz="17.5 2 0" rpy="0 0 3.1415926"/>
+            <mass value="0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="17.5 2 0" rpy="0 0 3.1415926"/>
+            <geometry>
+                <mesh filename="meshes/2.5/slope_1.STL"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="17.5 2 0" rpy="0 0 3.1415926"/>
+            <geometry>
+                <mesh filename="meshes/2.5/slope_1.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+
+    <!-- Joints to connect the links -->
+    <joint name="world_to_plane_box" type="fixed">
+        <parent link="world"/>
+        <child link="plane_box"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="world_to_slope_rough" type="fixed">
+        <parent link="world"/>
+        <child link="slope_rough"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="world_to_plane_box2" type="fixed">
+        <parent link="world"/>
+        <child link="plane_box2"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="world_to_plane_box3" type="fixed">
+        <parent link="world"/>
+        <child link="plane_box3"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="world_to_slope_rough2" type="fixed">
+        <parent link="world"/>
+        <child link="slope_rough2"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="world_to_slope_rough3" type="fixed">
+        <parent link="world"/>
+        <child link="slope_rough3"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+    <joint name="world_to_slope_rough4" type="fixed">
+        <parent link="world"/>
+        <child link="slope_rough4"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+
+    <joint name="plane_joint" type="fixed">
+        <parent link="world"/>
+        <child link="planeLink"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+</robot>
